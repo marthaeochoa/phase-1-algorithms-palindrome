@@ -1,9 +1,40 @@
-function isPalindrome(word) {
+// function isPalindrome(word) {
+   // Write your algorithm here
+//   word.toLowerCase()
+//   const len = word.length;
+
+//   for (let i = 0; i < len / 2; i++) {
+
+//     if (word[i] !== word[len - 1 - i]) {
+//         return false;
+//     }
+//   }
+//   return true
+// }
+
+function reverse(word){
+  const wordToArray = word.split("");
+  const arrayReverse = wordToArray.reverse();
+  const arrayToWord = arrayReverse.join("");
+  return arrayToWord
+}
+
+function isPalindrome(word){
   // Write your algorithm here
+  const reversedWord = reverse(word)
+
+  if(word === reversedWord){
+    return true
+  } else {
+    return false
+  }
 }
 
 /* 
   Add your pseudocode here
+  need to make the word all lowercase .toLowerCase()
+  must return boolean
+
 */
 
 /*
